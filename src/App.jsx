@@ -1,14 +1,13 @@
-import Navbar from "../src/components/Navbar";
-
+import {Navbar , Welcome} from "#components"
 
 function App() {
 
-  return <>
+  return <main>
      <Navbar/>
-   </>;
+     <Welcome/>
+   </main>;
 }
 
 export default App;
 
 
-// 30:

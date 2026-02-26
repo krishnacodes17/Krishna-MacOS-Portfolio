@@ -1,16 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import {resolve , dirname} from "path"
+import { resolve, dirname } from "path"
 import { fileURLToPath } from 'url'
-// https://vite.dev/config/
+
+const root = dirname(fileURLToPath(import.meta.url))   
 export default defineConfig({
-  plugins: [react(),   tailwindcss(),],
-  resolve:{
-    '#components': resolve(dirname(fileURLToPath(import.meta.url)),'components'),
-    '#constants': resolve(dirname(fileURLToPath(import.meta.url)),'components'),
-    '#store': resolve(dirname(fileURLToPath(import.meta.url)),'components'),
-    '#hoc': resolve(dirname(fileURLToPath(import.meta.url)),'components'),
-    '#windows': resolve(dirname(fileURLToPath(import.meta.url)),'components'),
+  plugins: [react(), tailwindcss()],
+
+  resolve: {
+    alias: {                                           
+      '#components': resolve(root, 'src/components'), 
+      '#constants': resolve(root, 'src/constants'),   
+      '#store': resolve(root, 'src/store'),            
+      '#hoc': resolve(root, 'src/hoc'),               
+      '#windows': resolve(root, 'src/windows'),       
+    }
   }
 })
