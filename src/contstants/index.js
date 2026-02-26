@@ -35,7 +35,7 @@ const navIcons = [
   },
 ];
 
-const dockApps = [
+ const dockApps = [
   {
     id: "finder",
     name: "Portfolio", // was "Finder"
@@ -504,3 +504,4 @@ const WINDOW_CONFIG = {
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+
