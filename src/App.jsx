@@ -9,7 +9,7 @@ function App() {
    </main>;
 }
 
-// 1:06 min 
+// 1:15 min 
 export default App;
 
 
