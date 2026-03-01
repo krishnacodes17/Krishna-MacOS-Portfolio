@@ -1,3 +1,57 @@
+# 🖥️ Krishna macOS Portfolio
+
+An interactive macOS-inspired portfolio built with React and modern frontend tools.  
+Instead of a traditional scrolling website, this project recreates a functional desktop experience inside the browser.
+
+Users can open apps like Finder, Safari, Terminal, Photos, and Contact — each rendered as draggable, focusable windows with proper z-index management, just like a real operating system.
+
+---
+
+## ✨ Features
+
+- 🪟 Draggable & focusable windows (GSAP Draggable)
+- 📂 Finder-style file navigation system
+- 🌐 Safari-inspired blog browser
+- 🖼️ Photos gallery with image preview windows
+- 🖥️ Terminal-style skills display
+- 📄 Dynamic text and image file rendering
+- 🧠 Centralized state management using Zustand + Immer
+- 🎨 Clean macOS UI styling with Tailwind CSS
+- ⚡ Smooth animations powered by GSAP
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- GSAP (Draggable)
+- Zustand (State Management)
+- Lucide Icons
+
+---
+
+## 🎯 Goal of This Project
+
+The goal was to move beyond traditional portfolio layouts and create an immersive, desktop-like user experience — demonstrating advanced UI logic, window management systems, animation control, and structured state handling.
+
+---
+
+## 🚀 What This Demonstrates
+
+- Complex UI state architecture
+- Dynamic window layering system
+- Component composition with HOCs
+- Interactive desktop simulation
+- Performance-focused animation handling
+
+---
+
+> This is not just a portfolio — it's a browser-based operating system experience.
+
+
+# Additional information
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
