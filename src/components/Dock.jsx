@@ -78,8 +78,7 @@ return () => {
 
 
  
-  console.log(dockApps)
-  console.log(dockApps)
+
   return (
     <section id="dock">
       <div ref={dockRef} className="dock-container">
