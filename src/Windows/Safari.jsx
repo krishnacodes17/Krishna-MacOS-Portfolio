@@ -1,4 +1,4 @@
-import WindowWrapper from '../hoc/WindowWrapper'
+import WindowWrapper from '../hoc/WindowWrapper.jsx'
 import { WindowControls } from '#components'
 import {blogPosts} from "#constants"
 import React from 'react'

@@ -1,6 +1,6 @@
 import { Check, Flag } from 'lucide-react'
 import { techStack } from '../constants/index'
-import WindowWrapper from '../hoc/WindowWrapper'
+import WindowWrapper from '../hoc/WindowWrapper.jsx'
 import React from 'react'
 import {WindowControls} from '#components'
 

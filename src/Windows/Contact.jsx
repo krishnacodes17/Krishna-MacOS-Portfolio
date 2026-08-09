@@ -1,6 +1,6 @@
 import { WindowControls } from "#components";
 import { socials } from '#constants'
-import WindowWrapper from '#hoc/windowWrapper.jsx'
+import WindowWrapper from '#hoc/WindowWrapper.jsx'
 import React from 'react'
 
 function Contact() {
