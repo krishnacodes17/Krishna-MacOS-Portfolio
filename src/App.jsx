@@ -1,8 +1,11 @@
-import { Finder, Resume, Safari, Terminal, Text, Image, Contact, Photo } from "./Windows";
+import { Finder, Safari, Terminal, Text, Image, Contact, Photo } from "./Windows";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { lazy, Suspense } from "react";
 import {Navbar , Welcome , Dock , Home} from "#components"
 gsap.registerPlugin(Draggable)
+
+const Resume = lazy(() => import("./Windows/Resume.jsx"));
 
 
 function App() {
@@ -13,7 +16,9 @@ function App() {
      <Dock/>
      <Terminal/>
      <Safari />
-     <Resume />
+     <Suspense fallback={null}>
+       <Resume />
+     </Suspense>
      <Finder />
      <Text />
      <Image />

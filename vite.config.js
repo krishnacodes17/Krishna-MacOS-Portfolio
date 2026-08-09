@@ -20,4 +20,41 @@ export default defineConfig({
 
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) {
+            return;
+          }
+
+          if (id.includes("react-pdf") || id.includes("pdfjs-dist")) {
+            return "vendor-pdf";
+          }
+
+          if (id.includes("gsap") || id.includes("@gsap/react")) {
+            return "vendor-animation";
+          }
+
+          if (
+            id.includes("react-dom") ||
+            id.includes("/react/") ||
+            id.includes("scheduler")
+          ) {
+            return "vendor-react";
+          }
+
+          if (
+            id.includes("lucide-react") ||
+            id.includes("react-tooltip") ||
+            id.includes("dayjs")
+          ) {
+            return "vendor-ui"
+          }
+
+          return "vendor"
+        },
+      },
+    },
+  },
 }); 

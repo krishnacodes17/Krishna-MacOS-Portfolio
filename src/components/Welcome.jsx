@@ -34,18 +34,23 @@ const setupTextHover = (container, type) => {
     });
   };
 
-  const handleMouseMove = (e) => {
-    const { left } = container.getBoundingClientRect();
-    const mouseX = e.clientX - left;
+const handleMouseMove = (e) => {
+  const { left } = container.getBoundingClientRect();
+  const mouseX = e.clientX - left;
 
-    letters.forEach((letter) => {
-      const { left: l, width: w } = letter.getBoundingClientRect();
-      const distance = Math.abs(mouseX - (l - left + w / 2));
-      const intensity = Math.exp(-(distance ** 2) / 2000);
+  letters.forEach((letter) => {
+    const { left: l, width: w } = letter.getBoundingClientRect();
+    const center = l - left + w / 2;
 
-      animateLetter(letter, min + (max - min) * intensity);
-    });
-  };
+    const distance = Math.abs(mouseX - center);
+    const maxDistance = 400;
+
+    const intensity = Math.max(0, 1 - distance / maxDistance);
+
+    animateLetter(letter, min + (max - min) * intensity);
+  });
+};
+  
   const handleMouseLeave = ()=> letters.forEach((letter)=> animateLetter(letter ,base, 0.3) )
 
   container.addEventListener("mousemove", handleMouseMove)
